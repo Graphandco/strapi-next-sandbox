@@ -4,7 +4,7 @@ module.exports = ({ env }) => ({
 	app: {
 		keys: env.array("APP_KEYS"),
 	},
-	url: env("APP_URL", "strapiback.graphandco.com"), // Si tu utilises un autre port/URL pour Strapi
+	url: env("APP_URL", "http://localhost:1337"), // Si tu utilises un autre port/URL pour Strapi
 	admin: {
 		auth: {
 			secret: env("ADMIN_JWT_SECRET"),
