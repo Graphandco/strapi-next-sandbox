@@ -12,7 +12,10 @@ export default async function Header() {
 			<div className="wrapper flex justify-between items-center gap-2">
 				<div className="flex items-center gap-2">
 					<Image
-						src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${headerContent.Logo.formats.thumbnail.url}`}
+						src={
+							process.env.NEXT_PUBLIC_STRAPI_URL +
+							headerContent.Logo.formats.thumbnail.url
+						}
 						width={35}
 						height={35}
 						alt="logo"
@@ -28,7 +31,7 @@ export default async function Header() {
 							<Link
 								key={page.id}
 								href={page.slug === "accueil" ? "/" : page.slug}
-								className="hover:text-white font-semibold hover:text-primary transition-colors"
+								className="hover:text-white font-semibold transition-colors"
 							>
 								{page.Titre}
 							</Link>
